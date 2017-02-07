@@ -1,0 +1,6 @@
+{
+  "directory": "www/lib", 
+  "proxy": "http://proxydc.amil.com.br:3128",
+  "https-proxy":"http://proxydc.amil.com.br:3128",
+  "no-proxy":"http://10.12.22.196:8100/"
+}

@@ -32,3 +32,4 @@ To store the current platforms and plugins to the package.json
 ### [Restore current state](https://www.raymondcamden.com/2015/04/20/ionic-adds-a-new-state-feature/)
 `ionic state restore`
 This will add in the appropriate plugins and platforms from the package.json
+"# caronajdisp" 

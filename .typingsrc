@@ -1,0 +1,2 @@
+proxy="http://proxydc.amil.com.br:3128"
+rejectUnauthorized=false
