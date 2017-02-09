@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.ionicframework.caronajdisp" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Carona</name>
-    <description>An awesome Ionic 2 Starter app.</description>
+    <description>Aplicativo destinado a compartilhamento de carona.</description>
     <author email="vitor.cominato@gmail.com" href="http://vitorcominato.com/">Vitor Cominato</author>
     <content src="index.html" />
     <access origin="*" />
