@@ -92,11 +92,11 @@ walkthrough-page {
 
 					&:first-child
 					{
-					  border-radius: 6px 0px 0px 6px;
+					  border-radius: 6px;
 
 						&::after
 						{
-							content: '';
+							//content: '';
 							background-color: color($colors, button-alt, base);
 							width: 2px;
 							@include calc(height, "100% - 20px");
@@ -109,7 +109,7 @@ walkthrough-page {
 					}
 					&:last-child
 					{
-					  border-radius: 0px 6px 6px 0px;
+					  border-radius: 6px;
 					}
 				}
 			}

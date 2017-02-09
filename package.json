@@ -1,7 +1,7 @@
 {
-  "name": "ion2-fullapp-PRO",
-  "author": "Ionic Themes",
-  "homepage": "https://ionicthemes.com",
+  "name": "Carona",
+  "author": "Vitor Cominato",
+  "homepage": "http://vitorcominato.com",
   "private": true,
   "scripts": {
     "ionic:build": "ionic-app-scripts build",
@@ -19,10 +19,13 @@
     "@angular/platform-server": "2.4.6",
     "@ionic/storage": "1.1.7",
     "@types/googlemaps": "^3.26.1",
+    "angularfire2": "^2.0.0-beta.7",
     "bourbon": "^4.2.7",
     "bower": "^1.8.0",
+    "cordova": "^6.5.0",
     "cordova-plugin-facebook4": "^1.7.4",
     "cordova-plugin-nativestorage": "^2.2.1",
+    "firebase": "^3.6.9",
     "form-data": "^2.1.2",
     "ionic-angular": "2.0.0",
     "ionic-native": "2.4.1",
@@ -32,7 +35,7 @@
     "zone.js": "0.7.6"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "1.0.0",
+    "@ionic/app-scripts": "^1.0.1",
     "typescript": "2.1.5"
   },
   "cordovaPlugins": [
@@ -54,8 +57,8 @@
       "id": "cordova-plugin-facebook4",
       "locator": "cordova-plugin-facebook4",
       "variables": {
-        "APP_ID": "826720427470540",
-        "APP_NAME": "Ion2FullApp"
+        "APP_ID": "380353142322899",
+        "APP_NAME": "Carona"
       }
     },
     {
@@ -78,7 +81,7 @@
       "locator": "android"
     }
   ],
-  "description": "ion2-FullApp: An Ionic project",
+  "description": "Aplicativo destinado a caronas",
   "config": {
     "ionic_sass": "./config/sass.config.js"
   }

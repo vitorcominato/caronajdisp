@@ -9,6 +9,8 @@ import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 import { FacebookLoginService } from '../facebook-login/facebook-login.service';
 import { GoogleLoginService } from '../google-login/google-login.service';
 
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
+
 @Component({
   selector: 'login-page',
   templateUrl: 'login.html'
@@ -17,13 +19,15 @@ export class LoginPage {
   login: FormGroup;
   main_page: { component: any };
   loading: any;
-
+  songs: FirebaseListObservable<any>;
 
   constructor(
     public nav: NavController,
     public facebookLoginService: FacebookLoginService,
     public googleLoginService: GoogleLoginService,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public navCtrl: NavController, 
+    af: AngularFire
   ) {
     this.main_page = { component: TabsNavigationPage };
 
@@ -31,6 +35,8 @@ export class LoginPage {
       email: new FormControl('', Validators.required),
       password: new FormControl('test', Validators.required)
     });
+
+    this.songs = af.database.list('/songs');
   }
 
   doLogin(){
@@ -45,6 +51,7 @@ export class LoginPage {
 
     this.facebookLoginService.getFacebookUser()
     .then(function(data) {
+      console.log(data);
        // user is previously logged with FB and we have his data we will let him access the app
       env.nav.setRoot(env.main_page.component);
     }, function(error){

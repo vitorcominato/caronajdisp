@@ -51,7 +51,16 @@ import { ContactCardPage } from '../pages/contact-card/contact-card';
 import { FacebookLoginService } from '../pages/facebook-login/facebook-login.service';
 import { GoogleLoginService } from '../pages/google-login/google-login.service';
 import { GoogleMapsService } from '../pages/maps/maps.service';
+import { AngularFireModule } from 'angularfire2';
 
+// AF2 Settings
+export const firebaseConfig = {
+  apiKey: "AIzaSyBsm-oODm66L27FDW1wjCliUSKVVUORxGw",
+  authDomain: "carona-785e5.firebaseapp.com",
+  databaseURL: "https://carona-785e5.firebaseio.com",
+  storageBucket: "carona-785e5.appspot.com",
+  messagingSenderId: "49454864555"
+};
 
 @NgModule({
   declarations: [
@@ -93,7 +102,8 @@ import { GoogleMapsService } from '../pages/maps/maps.service';
     GoogleMap
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
