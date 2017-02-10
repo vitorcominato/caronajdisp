@@ -19,6 +19,7 @@ import { SchedulePage } from '../pages/schedule/schedule';
 import { List1Page } from '../pages/list-1/list-1';
 import { List2Page } from '../pages/list-2/list-2';
 import { GridPage } from '../pages/grid/grid';
+import { RidesPage } from '../pages/rides/rides';
 import { FormLayoutPage } from '../pages/form-layout/form-layout';
 import { FiltersPage } from '../pages/filters/filters';
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
@@ -40,6 +41,7 @@ import { NotificationsService } from '../pages/notifications/notifications.servi
 import { List1Service } from '../pages/list-1/list-1.service';
 import { List2Service } from '../pages/list-2/list-2.service';
 import { ScheduleService } from '../pages/schedule/schedule.service';
+import { RidesService } from '../pages/rides/rides.service';
 
 // Functionalities
 import { FunctionalitiesPage } from '../pages/functionalities/functionalities';
@@ -82,6 +84,7 @@ export const firebaseConfig = {
     List1Page,
     List2Page,
     GridPage,
+    RidesPage,
     FormLayoutPage,
     FiltersPage,
     TermsOfServicePage,
@@ -125,6 +128,7 @@ export const firebaseConfig = {
     List1Page,
     List2Page,
     GridPage,
+    RidesPage,
     FormLayoutPage,
     FiltersPage,
     TermsOfServicePage,
@@ -143,6 +147,7 @@ export const firebaseConfig = {
     List1Service,
     List2Service,
     ScheduleService,
+    RidesService,
 
     FacebookLoginService,
     GoogleLoginService,

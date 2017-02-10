@@ -26,36 +26,5 @@
             "title": "Combat Sports",
             "image": "./assets/images/listing/300x300CombatSports.png"
         }
-    ],
-    "categories": [
-        {
-            "title": "Basketball",
-            "image": "./assets/images/listing/200x200basquet.png"
-        },
-        {
-            "title": "Boxing",
-            "image": "./assets/images/listing/200x200boxeo.png"
-        },
-        {
-            "title": "Crossfit",
-            "image": "./assets/images/listing/200x200crossfit.png"
-        },
-        {
-            "title": "Futbol",
-            "image": "./assets/images/listing/200x200futbol.png"
-        },
-        {
-            "title": "Running",
-            "image": "./assets/images/listing/200x200running.png"
-        },
-        {
-            "title": "Swimming",
-            "image": "./assets/images/listing/200x200swimming.png"
-        },
-        {
-            "title": "Yoga",
-            "image": "./assets/images/listing/200x200yoga.png"
-        }
-
     ]
 }

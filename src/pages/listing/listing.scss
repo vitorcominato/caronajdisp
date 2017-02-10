@@ -44,13 +44,14 @@ listing-page {
 			{
 				height: 100%;
 				z-index: 3;
-  			position: absolute;
+  				position: absolute;
 				@include align-items(center);
 
 				.main-title
 				{
 					@include categories-title-style($white);
 					font-size: 10vw;
+					font-family: $title-font;
 				}
 			}
 		}
@@ -110,7 +111,7 @@ listing-page {
 
 				.category-heading
 				{
-					padding-bottom: 100%;
+					padding-bottom: 35%;
 
 					.bg-overlay
 					{

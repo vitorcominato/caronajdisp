@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
 
-import { FeedPage } from '../feed/feed';
+import { RidesPage } from '../rides/rides';
 import 'rxjs/Rx';
 
 import { ListingModel } from './listing.model';
@@ -39,9 +39,9 @@ export class ListingPage {
   }
 
 
-  goToFeed(category: any) {
-    console.log("Clicked goToFeed", category);
-    this.nav.push(FeedPage, { category: category });
+  goToRides() {
+    console.log("Clicked goToRides");
+    this.nav.push(RidesPage);
   }
 
 }

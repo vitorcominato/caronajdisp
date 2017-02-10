@@ -47,7 +47,7 @@ walkthrough-page {
 			{
 				@include justify-content(center);
 				margin-top: 90px;
-				margin-top: 16vh;
+				margin-top: 30vh;
 			}
 
 			.main-title
@@ -55,7 +55,7 @@ walkthrough-page {
 				margin: 35px 20px 20px;
 				font-size: 3.4rem;
 				font-weight: 900;
-				font-style: italic;
+				font-family: $title-font;
 				text-align: center;
 				color: $white;
 			}
