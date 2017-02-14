@@ -1,115 +1,205 @@
 {
     "today":[
       {
-        "subject": "Meeting with Alex",
-        "location": "7 Vanbrugh Park Road West",
-        "date": {
+        "subject": "Italo Faria",
+        "location_departure": "Rua antonio lucato, 400 Eloy chaves",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification1.jpeg",
+        "price": 10,
+        "date_departure": {
           "day": "30",
           "month": "11",
           "month_name": "NOV",
-          "time": "11:00 am",
-          "full": "30/11 - 11:00 am"
+          "time": "11:00 am"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Lunch with Seth",
-        "location": "123 Fake Street",
-        "date": {
+        "subject": "Maria Amorim",
+        "location_departure": "123 Fake Street",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification2.png",
+        "price": 10,
+        "date_departure": {
           "day": "30",
           "month": "11",
           "month_name": "NOV",
-          "time": "1:00 pm",
-          "full": "30/11 - 1:00 pm"
+          "time": "1:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Conference Call with UY",
-        "location": "Skype",
-        "date": {
+        "subject": "Joana Silva",
+        "location_departure": "Skype",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification3.jpg",
+        "price": 10,
+        "date_departure": {
           "day": "30",
           "month": "11",
           "month_name": "NOV",
-          "time": "2:30 pm",
-          "full": "30/11 - 2:30 pm"
+          "time": "2:30 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Afternoon Tea with Sara",
-        "location": "Ritz",
-        "date": {
+        "subject": "Marcos Alberto do Nascimento",
+        "location_departure": "Ritz",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification4.jpeg",
+        "price": 10,
+        "date_departure": {
           "day": "30",
           "month": "11",
           "month_name": "NOV",
-          "time": "5:00 pm",
-          "full": "30/11 - 5:00 pm"
+          "time": "5:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Dinner Party at LeRouge",
-        "location": "34 Soho Street",
-        "date": {
+        "subject": "Marcela Almeida",
+        "location_departure": "34 Soho Street",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification5.jpg",
+        "price": 10,
+        "date_departure": {
           "day": "30",
           "month": "11",
           "month_name": "NOV",
-          "time": "8:00 pm",
-          "full": "30/11 - 8:00 pm"
+          "time": "8:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       }
     ],
     "upcoming":[
       {
-        "subject": "Rehearsal Dinner at Thai Palace",
-        "location": "15 Orchard Avenue",
-        "date": {
+        "subject": "Marcelo",
+        "location_departure": "15 Orchard Avenue",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification6.jpg",
+        "price": 10,
+        "date_departure": {
           "day": "01",
           "month": "12",
           "month_name": "DEC",
-          "time": "7:00 pm",
-          "full": "01/12 - 7:00 pm"
+          "time": "7:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Lunch Date with Ryan",
-        "location": "23 Downing Street",
-        "date": {
+        "subject": "Lucas",
+        "location_departure": "23 Downing Street",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification7.jpg",
+        "price": 10,
+        "date_departure": {
           "day": "02",
           "month": "12",
           "month_name": "DEC",
-          "time": "12:30 pm",
-          "full": "02/12 - 12:30 pm"
+          "time": "12:30 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "The Rolling Stones Tour",
-        "location": "O2 Arena, Greenwich",
-        "date": {
+        "subject": "Ítalo",
+        "location_departure": "O2 Arena, Greenwich",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification1.jpeg",
+        "price": 10,
+        "date_departure": {
           "day": "04",
           "month": "12",
           "month_name": "DEC",
-          "time": "6:00 pm",
-          "full": "04/12 - 6:00 pm"
+          "time": "6:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Holiday Shopping",
-        "location": "Westfield Shopping Mall",
-        "date": {
+        "subject": "Rodrigo",
+        "location_departure": "Westfield Shopping Mall",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification2.png",
+        "price": 10,
+        "date_departure": {
           "day": "15",
           "month": "12",
           "month_name": "DEC",
-          "time": "3:00 pm",
-          "full": "15/12 - 3:00 pm"
+          "time": "3:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       },
       {
-        "subject": "Christmas Break",
-        "location": "Berkhamsted, Hertfordshire",
-        "date": {
+        "subject": "Eduardo",
+        "location_departure": "Berkhamsted, Hertfordshire",
+        "location_arrival": "Av. Chucri Zaidan, 400 Morumbi",
+        "spots": 2,
+        "image": "./assets/images/notifications/100x100Notification3.jpg",
+        "price": 10,
+        "date_departure": {
           "day": "24",
           "month": "12",
           "month_name": "DEC",
-          "time": "1:00 pm",
-          "full": "24/12 - 1:00 pm"
+          "time": "1:00 pm"
+        },
+        "date_arrival": {
+          "day": "30",
+          "month": "11",
+          "month_name": "NOV",
+          "time": "11:00 am"
         }
       }
   ]

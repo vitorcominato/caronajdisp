@@ -8,7 +8,7 @@ import { counterRangeValidator } from '../../components/counter-input/counter-in
   templateUrl: 'filters.html'
 })
 export class FiltersPage {
-  filterForm: any;
+  rangeForm: any;
   checkboxForm: FormGroup;
   radioForm: FormGroup;
   checkboxTagsForm: FormGroup;
@@ -17,17 +17,11 @@ export class FiltersPage {
   counterForm: any;
   ratingForm: FormGroup;
   radioColorForm: FormGroup;
-  today: any;
-
-
 
   constructor(public nav: NavController) {
-    this.today = new Date().toISOString();
-    this.filterForm = new FormGroup({
+    this.rangeForm = new FormGroup({
       single: new FormControl(25),
-      dual: new FormControl({lower: 1, upper: 300}),
-      dateFrom: new FormControl(new Date().toISOString()),
-      dateTo: new FormControl(new Date("12/31/2099").toISOString())
+      dual: new FormControl({lower: 33, upper: 60})
     });
 
     this.checkboxForm = new FormGroup({

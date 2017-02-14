@@ -39,6 +39,10 @@ rides-page {
 					ion-label {
 						margin: 0px;
 					}
+					h2.priceValue {
+					    color: color($colors, favorite);
+					    font-weight: bold;
+					}
 				}
 
 				.schedule-date
@@ -84,9 +88,12 @@ rides-page {
 						.item-content
 						{
 							flex: 0 0 90%;
-					    max-width: 90%;
+					    	max-width: 90%;
 							padding-right: 5px;
-
+							.imgBookRide{
+								max-width: 50px;
+    							float: left;
+							}
 							.item-title
 							{
 								font-size: 1.6rem;
@@ -100,6 +107,24 @@ rides-page {
 									overflow: hidden;
 									text-overflow: ellipsis;
 									white-space: nowrap;
+									&.riderName{
+										line-height: 56px;
+										margin-bottom: 0px;
+									}
+								}
+
+								&.departureTitle
+								{
+									margin-top: 10px;
+									font-size: 1.3rem;
+									color: color($colors, danger);
+								}
+
+								&.arrivalTitle
+								{
+									margin-top: 10px;
+									font-size: 1.3rem;
+									color: color($colors, secondary);
 								}
 							}
 
@@ -109,7 +134,9 @@ rides-page {
 								@include display(flex);
 								@include align-items(center);
 								@include justify-content(space-between);
-
+								.clearBoth{
+									clear: both;
+								}
 								&:last-child
 								{
 									margin: 0px;
@@ -128,7 +155,7 @@ rides-page {
 								.description-text
 								{
 									flex: 0 0 88%;
-							    max-width: 88%;
+							    	max-width: 88%;
 									padding-left: 2px;
 									white-space: normal;
 									font-size: 1.2rem;
@@ -149,8 +176,8 @@ rides-page {
 						.item-icon
 						{
 							flex: 0 0 10%;
-					    max-width: 10%;
-						  text-align: right;
+					    	max-width: 10%;
+						  	text-align: right;
 							color: $theme-color-2;
 							font-size: 2.2em;
 							padding-left: 5px;

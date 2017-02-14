@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, SegmentButton, LoadingController } from 'ionic-angular';
+import { NavController, SegmentButton, LoadingController, App } from 'ionic-angular';
 import 'rxjs/Rx';
 
 import { RidesModel } from './rides.model';
 import { RidesService } from './rides.service';
+import { FiltersPage } from '../filters/filters';
 
 @Component({
   selector: 'rides-page',
@@ -17,6 +18,7 @@ export class RidesPage {
   constructor(
     public nav: NavController,
     public ridesService: RidesService,
+    public app: App,
     public loadingCtrl: LoadingController
   ) {
     this.segment = "today";
@@ -34,6 +36,10 @@ export class RidesPage {
       });
   }
 
+  goToFilter() {
+    this.app.getRootNav().push(FiltersPage);
+  }
+  
   onSegmentChanged(segmentButton: SegmentButton) {
     // console.log('Segment changed to', segmentButton.value);
   }

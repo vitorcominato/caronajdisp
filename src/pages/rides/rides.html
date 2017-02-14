@@ -7,10 +7,10 @@
 <ion-content class="schedule-content">
   <ion-segment class="schedule-segment" [(ngModel)]="segment" (ionChange)="onSegmentChanged($event)">
     <ion-segment-button value="today" (ionSelect)="onSegmentSelected($event)">
-      Today
+      Hoje
     </ion-segment-button>
     <ion-segment-button value="upcoming" (ionSelect)="onSegmentSelected($event)">
-      Upcoming
+      Próximas
     </ion-segment-button>
   </ion-segment>
 
@@ -18,25 +18,46 @@
     <div *ngSwitchCase="'today'">
       <ion-list class="schedule-list">
         <ion-item class="schedule-item" *ngFor="let item of schedule.today">
+          <ion-fab top right>
+            <h2 class="priceValue">{{item.price}}$</h2>
+          </ion-fab>
           <ion-row>
-            <ion-col width-20 class="schedule-date">
-              <h2 class="schedule-day">{{item.date.day}}</h2>
-              <h3 class="schedule-month">{{item.date.month_name}}</h3>
-              <h4 class="schedule-time">{{item.date.time}}</h4>
-            </ion-col>
-            <ion-col width-80 class="schedule-data">
+            <!-- <ion-col width-20 class="schedule-date">
+              <h2 class="schedule-day">{{item.date_departure.day}}</h2>
+              <h3 class="schedule-month">{{item.date_departure.month_name}}</h3>
+              <h4 class="schedule-time">{{item.date_departure.time}}</h4>
+            </ion-col> -->
+            <ion-col width-100 class="schedule-data">
               <div class="data-item">
                 <div class="item-content">
-                  <h2 class="item-title one-line">{{item.subject}}</h2>
+                  <ion-avatar item-left class="imgBookRide">
+                    <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+                  </ion-avatar>
+                  <h2 class="item-title one-line riderName">{{item.subject}}</h2>
+                  <h2 class="item-title one-line departureTitle">Saída</h2>
                   <div class="item-description">
                     <ion-icon class="description-icon" name="clock"></ion-icon>
-                    <p class="description-text">{{item.date.full}}</p>
+                    <p class="description-text">{{item.date_departure.day}}/{{item.date_departure.month}} - {{item.date_departure.time}}</p>
                   </div>
                   <div class="item-description">
                     <ion-icon class="description-icon" name="navigate"></ion-icon>
-                    <p class="description-text one-line">{{item.location}}</p>
+                    <p class="description-text one-line">{{item.location_departure}}</p>
+                  </div>
+                  <h2 class="item-title one-line arrivalTitle">Chegada</h2> 
+                  <div class="item-description">
+                    <ion-icon class="description-icon" name="clock"></ion-icon>
+                    <p class="description-text">{{item.date_arrival.day}}/{{item.date_arrival.month}} - {{item.date_arrival.time}}</p>
+                  </div>
+                  <div class="item-description">
+                    <ion-icon class="description-icon" name="pin"></ion-icon>
+                    <p class="description-text one-line">{{item.location_arrival}}</p>
+                  </div>
+                  <div class="item-description">
+                    <ion-icon class="description-icon" name="locate"></ion-icon>
+                    <p class="description-text one-line">{{item.spots}} Vagas</p>
                   </div>
                 </div>
+ 
                 <ion-icon class="item-icon" name="arrow-forward"></ion-icon>
               </div>
             </ion-col>
@@ -47,25 +68,41 @@
     <div *ngSwitchCase="'upcoming'">
       <ion-list class="schedule-list">
         <ion-item class="schedule-item" *ngFor="let item of schedule.upcoming">
+          <ion-fab top right>
+            <h2 class="priceValue">{{item.price}}$</h2>
+          </ion-fab>
           <ion-row>
-            <ion-col width-20 class="schedule-date">
-              <h2 class="schedule-day">{{item.date.day}}</h2>
-              <h3 class="schedule-month">{{item.date.month_name}}</h3>
-              <h4 class="schedule-time">{{item.date.time}}</h4>
-            </ion-col>
-            <ion-col width-80 class="schedule-data">
+            <ion-col width-100 class="schedule-data">
               <div class="data-item">
                 <div class="item-content">
-                  <h2 class="item-title one-line">{{item.subject}}</h2>
+                  <ion-avatar item-left class="imgBookRide">
+                    <preload-image class="user-image" [ratio]="{w:1, h:1}" [src]="item.image"></preload-image>
+                  </ion-avatar>
+                  <h2 class="item-title one-line riderName">{{item.subject}}</h2>
+                  <h2 class="item-title one-line departureTitle">Saída</h2>
                   <div class="item-description">
                     <ion-icon class="description-icon" name="clock"></ion-icon>
-                    <p class="description-text">{{item.date.full}}</p>
+                    <p class="description-text">{{item.date_departure.day}}/{{item.date_departure.month}} - {{item.date_departure.time}}</p>
                   </div>
                   <div class="item-description">
                     <ion-icon class="description-icon" name="navigate"></ion-icon>
-                    <p class="description-text one-line">{{item.location}}</p>
+                    <p class="description-text one-line">{{item.location_departure}}</p>
+                  </div>
+                  <h2 class="item-title one-line arrivalTitle">Chegada</h2> 
+                  <div class="item-description">
+                    <ion-icon class="description-icon" name="clock"></ion-icon>
+                    <p class="description-text">{{item.date_arrival.day}}/{{item.date_arrival.month}} - {{item.date_arrival.time}}</p>
+                  </div>
+                  <div class="item-description">
+                    <ion-icon class="description-icon" name="pin"></ion-icon>
+                    <p class="description-text one-line">{{item.location_arrival}}</p>
+                  </div>
+                  <div class="item-description">
+                    <ion-icon class="description-icon" name="locate"></ion-icon>
+                    <p class="description-text one-line">{{item.spots}} Vagas</p>
                   </div>
                 </div>
+ 
                 <ion-icon class="item-icon" name="arrow-forward"></ion-icon>
               </div>
             </ion-col>
@@ -74,4 +111,9 @@
       </ion-list>
     </div>
   </div>
+  <ion-fab bottom right (click)="goToFilter()">
+    <button ion-fab color="theme-color-1">
+      <ion-icon class="description-icon" name="funnel"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

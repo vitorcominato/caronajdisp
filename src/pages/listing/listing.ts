@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, LoadingController, App } from 'ionic-angular';
 
 import { RidesPage } from '../rides/rides';
 import 'rxjs/Rx';
@@ -19,7 +19,8 @@ export class ListingPage {
   constructor(
     public nav: NavController,
     public listingService: ListingService,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public app: App
   ) {
     this.loading = this.loadingCtrl.create();
   }
@@ -41,7 +42,7 @@ export class ListingPage {
 
   goToRides() {
     console.log("Clicked goToRides");
-    this.nav.push(RidesPage);
+    this.app.getRootNav().push(RidesPage);
   }
 
 }
