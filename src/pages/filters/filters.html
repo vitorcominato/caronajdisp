@@ -5,8 +5,9 @@
 </ion-header>
 
 <ion-content class="filters-content">
+  <div id="map"></div> 
   <ion-item-group class="filters-group">
-    <ion-item-divider>Range</ion-item-divider>
+    
     <form [formGroup]="filterForm">
       <ion-list class="range-list">
         <ion-item class="range-item">
@@ -19,12 +20,13 @@
         </ion-item>
         <ion-item class="range-item single-range">
           <ion-label>
+            <h3 class="range-value">{{filterForm.controls.single.value.lower}}</h3>
             <h2 class="range-label">Vagas</h2>
-            <h3 class="range-value">{{filterForm.controls.single.value}}</h3>
+            <h3 class="range-value">{{filterForm.controls.single.value.upper}}</h3>
           </ion-label>
-          <ion-range formControlName="single" (ionChange)="rangeChange($event)" min="0" max="10" step="1" snaps="true" pin="true"></ion-range>
+          <ion-range formControlName="single" dualKnobs="true" (ionChange)="rangeChange($event)" min="1" max="10" step="1" snaps="true" pin="true"></ion-range>
         </ion-item>
-
+        <ion-item-divider>Data</ion-item-divider>
         <ion-item>
           <ion-label>De</ion-label>
           <ion-datetime displayFormat="DD/MM/YYYY" max="2999-11-31" min="{{today}}" formControlName="dateFrom"></ion-datetime>
@@ -32,6 +34,16 @@
         <ion-item>
           <ion-label>Até</ion-label>
           <ion-datetime displayFormat="DD/MM/YYYY" max="2999-11-31" min="{{filterForm.controls.dateFrom.value}}" formControlName="dateTo"></ion-datetime>
+        </ion-item>
+
+        <ion-item-divider>Local</ion-item-divider>
+        <ion-item>
+          <ion-label>De</ion-label>
+          <ion-input (focus)="showAddressModal()" formControlName="locationFrom" type="text" placeholder="Pick an address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Até</ion-label>
+          
         </ion-item>
       </ion-list>
     </form>

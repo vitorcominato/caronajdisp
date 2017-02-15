@@ -22,6 +22,7 @@ import { GridPage } from '../pages/grid/grid';
 import { RidesPage } from '../pages/rides/rides';
 import { FormLayoutPage } from '../pages/form-layout/form-layout';
 import { FiltersPage } from '../pages/filters/filters';
+import { AutocompletePage } from '../pages/filters/autocomplete';
 import { TermsOfServicePage } from '../pages/terms-of-service/terms-of-service';
 import { PrivacyPolicyPage } from '../pages/privacy-policy/privacy-policy';
 
@@ -87,6 +88,7 @@ export const firebaseConfig = {
     RidesPage,
     FormLayoutPage,
     FiltersPage,
+    AutocompletePage,
     TermsOfServicePage,
     PrivacyPolicyPage,
     MapsPage,
@@ -131,6 +133,7 @@ export const firebaseConfig = {
     RidesPage,
     FormLayoutPage,
     FiltersPage,
+    AutocompletePage,
     TermsOfServicePage,
     PrivacyPolicyPage,
     MapsPage,

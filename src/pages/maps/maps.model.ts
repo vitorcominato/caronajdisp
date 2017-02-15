@@ -1,10 +1,10 @@
 export class MapsModel {
-  map: google.maps.Map;
+	map: google.maps.Map;
 	map_options: google.maps.MapOptions = {
-    center: {lat: 40.785091, lng: -73.968285},
-    zoom: 13,
-    disableDefaultUI: true
-  };
+		center: {lat: 40.785091, lng: -73.968285},
+		zoom: 13,
+		disableDefaultUI: true
+	};
 
 	map_places: Array<MapPlace> = [];
 
@@ -52,10 +52,10 @@ export class MapsModel {
 
 		_map_place.location = location;
 		_map_place.marker = new google.maps.Marker({
-      position: location,
-      map: this.map,
-      icon: MapPlace.createIcon(color)
-    });
+	      position: location,
+	      map: this.map,
+	      icon: MapPlace.createIcon(color)
+	    });
 
 		this.map_places.push(_map_place);
 
@@ -92,17 +92,17 @@ export class MapPlace {
 
 	// https://developers.google.com/maps/documentation/javascript/reference#Symbol
 	static createIcon(color: string) : google.maps.Symbol {
-    let _icon: google.maps.Symbol = {
-      path: "M144 400c80 0 144 -60 144 -134c0 -104 -144 -282 -144 -282s-144 178 -144 282c0 74 64 134 144 134zM144 209c26 0 47 21 47 47s-21 47 -47 47s-47 -21 -47 -47s21 -47 47 -47z",
-      fillColor: color,
-      fillOpacity: .6,
-      anchor: new google.maps.Point(0,0),
-      strokeWeight: 0,
-      scale: 0.08,
-      rotation: 180
-    }
-    return _icon;
-  }
+	    let _icon: google.maps.Symbol = {
+	      path: "M144 400c80 0 144 -60 144 -134c0 -104 -144 -282 -144 -282s-144 178 -144 282c0 74 64 134 144 134zM144 209c26 0 47 21 47 47s-21 47 -47 47s-47 -21 -47 -47s21 -47 47 -47z",
+	      fillColor: color,
+	      fillOpacity: .6,
+	      anchor: new google.maps.Point(0,0),
+	      strokeWeight: 0,
+	      scale: 0.08,
+	      rotation: 180
+	    }
+    	return _icon;
+  	}
 
 	setIcon(color: string) : void {
 		this.marker.setIcon(MapPlace.createIcon(color));
@@ -110,11 +110,11 @@ export class MapPlace {
 
 	deselect() {
 		this.selected = false;
-    this.setIcon('#666666');
+    	this.setIcon('#666666');
 	}
 
 	select() {
 		this.selected = true;
-    this.setIcon('#ae75e7');
+    	this.setIcon('#ae75e7');
 	}
 }

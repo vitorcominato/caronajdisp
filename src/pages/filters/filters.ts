@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, Range } from 'ionic-angular';
+import { NavController, Range, ModalController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
 import { counterRangeValidator } from '../../components/counter-input/counter-input';
+import {AutocompletePage} from './autocomplete';
 
 @Component({
   selector: 'filters-page',
@@ -21,14 +22,18 @@ export class FiltersPage {
 
 
 
-  constructor(public nav: NavController) {
+  constructor(public nav: NavController, private modalCtrl: ModalController) {
     this.today = new Date().toISOString();
     this.filterForm = new FormGroup({
-      single: new FormControl(25),
-      dual: new FormControl({lower: 1, upper: 300}),
+      single: new FormControl({lower: 1, upper: 10}),
+      dual: new FormControl({lower: 0, upper: 300}),
       dateFrom: new FormControl(new Date().toISOString()),
-      dateTo: new FormControl(new Date("12/31/2099").toISOString())
+      dateTo: new FormControl(new Date("12/31/2099").toISOString()),
+      locationFrom: new FormControl()
     });
+
+    
+
 
     this.checkboxForm = new FormGroup({
       person_1: new FormControl(true),
@@ -81,4 +86,11 @@ export class FiltersPage {
     console.log(`range, change, ratio: ${range.ratio}, value: ${range.value}`);
   }
 
+  showAddressModal () {
+    let modal = this.modalCtrl.create(AutocompletePage);
+    modal.onDidDismiss(data => {
+      this.filterForm.controls.locationFrom = data;
+    });
+    modal.present();
+  }
 }

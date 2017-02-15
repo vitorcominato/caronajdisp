@@ -32,7 +32,7 @@ export class LoginPage {
     this.main_page = { component: TabsNavigationPage };
 
     this.login = new FormGroup({
-      email: new FormControl('', Validators.required),
+      email: new FormControl('test@test.com', Validators.required),
       password: new FormControl('test', Validators.required)
     });
 
