@@ -10,6 +10,7 @@ export class MapsModel {
 
 	search_query: string = '';
 	search_places_predictions: Array<google.maps.places.AutocompletePrediction> = [];
+	search_places_predictionsTo: Array<google.maps.places.AutocompletePrediction> = [];
 
 	nearby_places: Array<MapPlace> = [];
 
@@ -53,8 +54,7 @@ export class MapsModel {
 		_map_place.location = location;
 		_map_place.marker = new google.maps.Marker({
 	      position: location,
-	      map: this.map,
-	      icon: MapPlace.createIcon(color)
+	      map: this.map
 	    });
 
 		this.map_places.push(_map_place);

@@ -4,27 +4,28 @@
     "populars": [
         {
             "title": "Air Sports",
-            "image": "./assets/images/listing/300x300AirSports.png"
+            "image": "./assets/images/profile/200x200suarez.png"
         },
         {
             "title": "Water Sports",
-            "image": "./assets/images/listing/300x300WaterSports.png"
+            "image": "./assets/images/profile/200x200nadal.png"
         },
         {
             "title": "Beach Sports",
-            "image": "./assets/images/listing/300x300BeachSports.png"
+            "image": "./assets/images/profile/200x200manny.png"
         },
         {
             "title": "Extreme Sports",
-            "image": "./assets/images/listing/300x300ExtremeSports.png"
+            "image": "./assets/images/profile/200x200serena.png"
         },
         {
             "title": "Athletic Sports",
-            "image": "./assets/images/listing/300x300AthleticSports.png"
+            "image": "./assets/images/profile/200x200jordan.png"
         },
         {
             "title": "Combat Sports",
-            "image": "./assets/images/listing/300x300CombatSports.png"
+            "image": "./assets/images/profile/200x200ProfilePic.png"
         }
     ]
 }
+

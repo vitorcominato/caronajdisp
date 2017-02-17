@@ -116,7 +116,7 @@ export class GoogleMapsService {
         route_query: google.maps.DirectionsRequest = {
           origin: _origin,
           destination: _destination,
-          travelMode: google.maps.TravelMode.WALKING
+          travelMode: google.maps.TravelMode.DRIVING
         };
 
     return Observable.create((observer) => {

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Filters</ion-title>
+    <ion-title>Filtrar</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,6 +10,53 @@
     
     <form [formGroup]="filterForm">
       <ion-list class="range-list">
+        <ion-item-divider>Local</ion-item-divider>
+        <ion-item>
+          <ion-label>De</ion-label>
+          <ion-input (keyup)="searchPlacesPredictions('locationFrom')" formControlName="locationFrom" type="text" placeholder="Endereço de saída"></ion-input>
+        </ion-item>
+        <ion-list [hidden]="map_model.search_places_predictions.length == 0" class="search-options-list">
+          <ion-item *ngFor="let place of map_model.search_places_predictions" tappable (click)="selectSearchResult(place, 'locationFrom')">
+            {{ place.description }}
+          </ion-item>
+        </ion-list>
+
+        <ion-item>
+          <ion-label>Até</ion-label>
+          <ion-input (keyup)="searchPlacesPredictions('locationTo')" formControlName="locationTo" type="text" placeholder="Endereço de chegada"></ion-input>
+        </ion-item>
+        <ion-list [hidden]="map_model.search_places_predictionsTo.length == 0" class="search-options-list">
+          <ion-item *ngFor="let place of map_model.search_places_predictionsTo" tappable (click)="selectSearchResult(place, 'locationTo')">
+            {{ place.description }}
+          </ion-item>
+        </ion-list>
+
+        <ion-card>
+          <div class="map-container">
+            <google-map [options]="map_model.map_options"></google-map>
+          </div>
+
+          <ion-item>
+            <ion-icon name="navigate" item-left large></ion-icon>
+            <p>{{filterForm.controls.locationFrom.value}}</p>
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="pin" item-left large ></ion-icon>
+            <p>{{filterForm.controls.locationTo.value}}</p>
+          </ion-item>
+        </ion-card>
+
+        <ion-item-divider>Data</ion-item-divider>
+        <ion-item>
+          <ion-label>De</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" max="2999-11-31" min="{{today}}" formControlName="dateFrom"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Até</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" max="2999-11-31" min="{{filterForm.controls.dateFrom.value}}" formControlName="dateTo"></ion-datetime>
+        </ion-item> 
+
         <ion-item class="range-item">
           <ion-label>
             <h3 class="range-value">{{filterForm.controls.dual.value.lower}}</h3>
@@ -26,29 +73,16 @@
           </ion-label>
           <ion-range formControlName="single" dualKnobs="true" (ionChange)="rangeChange($event)" min="1" max="10" step="1" snaps="true" pin="true"></ion-range>
         </ion-item>
-        <ion-item-divider>Data</ion-item-divider>
-        <ion-item>
-          <ion-label>De</ion-label>
-          <ion-datetime displayFormat="DD/MM/YYYY" max="2999-11-31" min="{{today}}" formControlName="dateFrom"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label>Até</ion-label>
-          <ion-datetime displayFormat="DD/MM/YYYY" max="2999-11-31" min="{{filterForm.controls.dateFrom.value}}" formControlName="dateTo"></ion-datetime>
-        </ion-item>
-
-        <ion-item-divider>Local</ion-item-divider>
-        <ion-item>
-          <ion-label>De</ion-label>
-          <ion-input (focus)="showAddressModal()" formControlName="locationFrom" type="text" placeholder="Pick an address"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Até</ion-label>
-          
-        </ion-item>
+        <ion-item-divider></ion-item-divider>
+        <ion-fab bottom left class="fabBig">
+          <button ion-fab color="theme-color-1" class="actionFilter">
+            Filtrar
+          </button>
+        </ion-fab>
       </ion-list>
     </form>
 
-    <ion-item-divider>Multiple items</ion-item-divider>
+    <!-- <ion-item-divider>Multiple items</ion-item-divider>
     <form [formGroup]="checkboxForm">
       <ion-list class="checkbox-list">
         <ion-item class="checkbox-item">
@@ -277,6 +311,6 @@
           <ion-radio value="#61d1fc"></ion-radio>
         </ion-item>
       </ion-list>
-    </form>
+    </form> -->
   </ion-item-group>
 </ion-content>

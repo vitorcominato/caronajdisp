@@ -8,7 +8,7 @@
   <ion-row no-padding class="map-row">
     <ion-col no-padding class="map-col">
       <div class="search-container">
-        <!-- <ion-toolbar class="search-toolbar transparent-background"> -->
+        <!-- <ion-toolbar class="search-toolbar transparent-background">  -->
         <ion-toolbar class="search-toolbar">
           <ion-buttons start>
             <button ion-button icon-only (click)="geolocateMe()" class="geolocation-button" [ngClass]="{'using-geolocation': map_model.using_geolocation}">
@@ -23,9 +23,31 @@
           </ion-item>
         </ion-list>
       </div>
-      <div class="map-container">
-        <google-map [options]="map_model.map_options"></google-map>
-      </div>
+
+      <ion-card>
+        <div class="map-container">
+          <google-map [options]="map_model.map_options"></google-map>
+        </div>
+
+        <ion-item>
+          <ion-icon name="football" item-left large></ion-icon>
+          <h2>Museum of Football</h2>
+          <p>11 N. Way St, Madison, WI 53703</p>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="wine" item-left large ></ion-icon>
+          <h2>Institute of Fine Cocktails</h2>
+          <p>14 S. Hop Avenue, Madison, WI 53703</p>
+        </ion-item>
+
+        <ion-item>
+          <span item-left>18 min</span>
+          <span item-left>(2.6 mi)</span>
+        </ion-item>
+      </ion-card>
+
+      
       <ion-scroll [hidden]="map_model.nearby_places.length == 0" scrollX="true" class="nearby-places-container">
         <ion-row class="nearby-places-row">
           <ion-col width-64 class="place-item-outer" *ngFor="let place of map_model.nearby_places" [ngClass]="{'selected-place': place.selected}" (click)="choosePlace(place)">

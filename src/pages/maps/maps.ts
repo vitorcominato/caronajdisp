@@ -40,6 +40,7 @@ export class MapsPage implements OnInit {
   }
 
   searchPlacesPredictions(query: string){
+    console.log(query);
     let env = this;
 
     if(query !== "")

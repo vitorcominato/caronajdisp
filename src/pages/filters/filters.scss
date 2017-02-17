@@ -24,6 +24,16 @@ filters-page {
 	.filters-content
 	{
 		background-color: color($colors, background, base);
+		
+		.map-container {
+		    width: 100%;
+		    height: 200px;
+		    google-map {
+			    height: 100%;
+			    width: 100%;
+			}
+		}
+
 	}
 
 	.range-list
@@ -128,4 +138,27 @@ filters-page {
 
 		@include color-radio-styles($white, $black);
 	}
+
+	ion-list.search-options-list {
+	    position: absolute;
+	    left: 0;
+	    z-index: 9999;
+	    width: 100%;
+	}
+	ion-card ion-item ion-icon{
+		color: $theme-color-1;
+	}
+	ion-fab.fabBig {
+	    width: 100%;
+	    left: 0px;
+	    position: fixed;
+	    bottom: 0;
+	    
+	    button {
+		    width: 100%;
+		    border-radius: 0px;
+		}
+	}
+
+	
 }
